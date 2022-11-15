@@ -1,0 +1,11 @@
+query GetClaims( $jwt: String!){
+  getClaims(input: { jwt: $jwt }) {
+    claims {
+      userId
+      role
+      expiredAt
+      email
+    }
+    error
+  }
+}

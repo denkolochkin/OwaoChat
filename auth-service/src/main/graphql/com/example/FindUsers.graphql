@@ -1,0 +1,17 @@
+query FindUsers($idAnyOf: [Int!]!) {
+  findUsers(input: { idAnyOf: $idAnyOf}) {
+    users {
+      id
+      firstName
+      lastName
+      email
+      username
+      createdAt
+      updatedAt
+      avatarImageId
+      birthDate
+      gender
+      status
+    }
+  }
+}

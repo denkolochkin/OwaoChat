@@ -1,0 +1,32 @@
+mutation CreateUser($firstName: String!, $lastName: String!, $password: String!, $email: String!,$username: String!, $birthDate: Time!, $gender: Gender!, $avatarImageId: Int){
+  createUser(
+    input: {
+      firstName: $firstName
+      lastName: $lastName
+      password: $password
+      email: $email
+      username: $username
+      gender: $gender
+      birthDate: $birthDate
+      avatarImageId: $avatarImageId
+    }
+  ) {
+    user {
+      id
+      firstName
+      lastName
+      email
+      username
+      createdAt
+      updatedAt
+      avatarImageId
+      birthDate
+      gender
+      status
+    }
+    jwt
+    error
+  }
+}
+
+

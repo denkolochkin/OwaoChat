@@ -1,0 +1,6 @@
+query AutheticateUser($email: String!, $password: String!) {
+  authenticateUser(input: { email: $email, password: $password }) {
+    jwt
+    error
+  }
+}
